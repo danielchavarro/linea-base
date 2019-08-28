@@ -1,0 +1,579 @@
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>registro_usuario</title>
+
+        <link href="https://bancohv.dane.gov.co/assets/css/general/estiloGeneral.css" rel="stylesheet" media="screen">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/login.css" rel="stylesheet" media="screen">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/carousel.css" rel="stylesheet" media="screen">
+        <link href="https://bancohv.dane.gov.co/assets/css/bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="https://bancohv.dane.gov.co/assets/css/bootstrap/bootstrap-theme.css" rel="stylesheet" media="screen">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/validationEngine.jquery.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/jquery-ui.css" rel="stylesheet" type="text/css">-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/ui.jqgrid.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/ui.jqgrid-bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/bootstrap/datatable-bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/datatable-tools.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/bootstrap/bootstrap_pingedo.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/select2.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/select2-bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/style.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/multi-select.css" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/fileinput/fileinput.css" media="all" rel="stylesheet" type="text/css">        
+        <link href="https://bancohv.dane.gov.co/assets/css/general/tree/jquery.tree-multiselect.css" media="all" rel="stylesheet" type="text/css">        
+        <link href="https://bancohv.dane.gov.co/assets/css/general/datepicker3.min.css" media="all" rel="stylesheet" type="text/css">        
+        <link href="https://bancohv.dane.gov.co/assets/css/sistema.css" media="all" rel="stylesheet" type="text/css">     
+        <link href="https://bancohv.dane.gov.co/assets/css/general/buttons.dataTables.min.css" media="all" rel="stylesheet" type="text/css">
+        <link href="https://bancohv.dane.gov.co/assets/css/general/tabs_bootstrap.css" media="all" rel="stylesheet" type="text/css">        
+        <link href="https://bancohv.dane.gov.co/assets/css/general/bootstrap_table.css" media="all" rel="stylesheet" type="text/css">
+			
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+            var baseurl = "https://bancohv.dane.gov.co/";
+            var lenguaje = "spanish";
+        </script>
+        
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/principales/jquery-1.11.js"></script>
+        
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/bootstrap/bootstrap.js"></script>       
+        
+                            <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/principales/jquery.validationEngine-es.js" charset="utf-8"></script>
+                        
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/principales/jquery.validationEngine.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/jqgrid/i18n/grid.locale-es.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/select2.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/bootstrap-typeahead.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/bootstrap_table.js"></script>
+       
+        <script>
+		  $.fn.bootstrapBtn = $.fn.button.noConflict();
+		</script>
+        <script type="text/javascript">
+            $.jgrid.no_legacy_api = true;
+            $.jgrid.useJSON = true;
+        </script> 
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/jqgrid/jquery.jqGrid.min.js"></script>        
+        
+
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/datatable.js"></script>        
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/bootstrap/datatable-bootstrap.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/datatable-tools.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/jquery.multi-select.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/tinymce/tinymce.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/jquery.multi-open-accordion-1.0.1.js" charset="utf-8"></script>
+		<script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/fileinput/fileinput.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/fileinput/fileinput_locale_es.js"></script>
+
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/retroceso.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/sistema/login.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/sistema/perfil.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/sistema/convocatorias.js"></script>
+		<script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/sistema/convocatorias_coord.js"></script>		
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/bootstrap_datepicker.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/bootstrap_datepicker_es.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/tree/jquery.tree-multiselect.js"></script>
+        
+        
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/vfs_fonts.js"></script>
+        <script type="text/javascript" src="https://bancohv.dane.gov.co/assets/js/general/buttons.html5.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+
+                function formatState (state) {
+                    if (!state.id) { return state.text; }
+                    var $state = $(
+                      '<span> ' + state.text + '</span>'
+                    );
+                    return $state;
+                  };
+
+                $('#cambioIdioma').select2({
+                    templateResult: formatState
+                  });
+
+                $('#cambioIdioma').change(function() {      
+                    
+                    var url = baseurl + $(this).val();
+                    window.location = url;
+                 });
+                 
+                 
+            });
+        </script>
+
+        <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		 
+		  ga('create', 'UA-4720764-19', 'auto');
+		  ga('send', 'pageview');
+		 
+		</script>
+
+    </head>
+    <body>
+       
+                
+        <section class="container">
+            <script>
+$(document).ready(function() {
+
+	$(document).ready(function() {
+
+		$("#inputNumeIden").bind('paste', function(e) {
+			e.preventDefault();
+		});
+	});
+
+	$(document).ready(function() {
+
+		$("#inputNumeIdenConf").bind('paste', function(e) {
+			e.preventDefault();
+		});
+	});
+
+    $("#inputEmailConf").bind('paste', function(e) {
+        e.preventDefault();
+    });
+
+});
+
+$(document).ready(function() {
+
+    $("#inputEmail").bind('paste', function(e) {
+        e.preventDefault();
+    });
+});
+
+$(document).ready(function() {
+
+    $("#inputClaveConf").bind('paste', function(e) {
+        e.preventDefault();
+    });
+
+});
+
+$(document).ready(function() {
+
+    $("#inputClave").bind('paste', function(e) {
+        e.preventDefault();
+    });
+});
+
+
+</script>
+
+<div class="section" >
+   
+   
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+        	<div class="row" style="background-color: rgb(19, 116, 161); opacity: 0.9; z-index: -10000;">
+        		<p></p><center><h1 style="color: #FFFFFF">REGISTRE</h1></center><p></p>
+        		<p></p><center><h1 style="color: #FFFFFF"><b>SU HOJA DE VIDA</b></h1></center><p></p>
+        	</div>
+            <div class="row" style="background-color: white; opacity: 0.9; z-index: 10000;">
+                <div class="col-md-12 text-center">
+                    <center><h4 class="text-center">Registra tu hoja de vida para poder acceder a los empleos disponibles en Neiva para ti</b></h4></center>
+                </div>
+                <div class="col-md-12">
+                    <form class="form-horizontal" role="form" id="formCrearUsuario"  name="formCrearUsuario" method="post" autocomplete="off">
+                        <div class="form-group has-feedback">
+                            <div class="col-sm-6 text-left">
+                                <label for="inputTipoIden" class="control-label">Tipo identificación:</label>
+                                <select class="validate[required] form-control select2-select" id="tipo_iden" name="tipo_iden">
+                                    <option value="">Seleccione...</option>
+                                    <option value="CC">Cédula de Ciudadanía</option>                                
+                                </select>
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <label for="inputNombres" class="control-label">Número identificación:</label>
+                                <input type="text" class="validate[required, custom[onlyNumberSp], minSize[4], equals[inputNumeIdenConf]] form-control" id="inputNumeIden" name="inputNumeIden" placeholder="Número de identificación">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+                             <div class="col-sm-6 text-left">
+                                
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <label for="inputNombres" class="control-label">Confirmar identificación:</label>
+                                <input type="text" class="validate[required, custom[onlyNumberSp], minSize[4], equals[inputNumeIden]] form-control" id="inputNumeIdenConf" name="inputNumeIdenConf" placeholder="Confirmar Número de identificación">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+							
+                        </div>
+                        <div class="form-group has-feedback">
+                            <div class="col-sm-6 text-left">
+                                <label for="inputNombres" class="control-label">Nombres:</label>
+                                <input type="text" class="validate[required, custom[onlyLetterSp]] form-control" id="inputNombres" name="inputNombres" placeholder="Nombres">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <label for="inputApellidos" class="control-label">Apellidos:</label>
+                                <input type="text" class="validate[required, custom[onlyLetterSp]] form-control" id="inputApellidos" name="inputApellidos" placeholder="Apellidos">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <div class="col-sm-6 text-left">
+                                <label for="inputEmail" class="control-label">Correo electrónico:</label>
+                                <input type="text" class="validate[required, custom[email]] form-control" id="inputEmail" name="inputEmail" placeholder="Correo electrónico">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <label for="inputEmail" class="control-label">Confirmar correo electrónico:</label>
+                                <input type="text" class="validate[required, custom[email]] form-control" id="inputEmailConf" name="inputEmailConf" placeholder="Confirmar correo electrónico">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+                        </div>                    
+                        <div class="form-group has-feedback">
+                            <div class="col-sm-6 text-left">
+                                <label for="inputClave" class="control-label">Contraseña:</label>
+                                <input type="password" class="validate[required, minSize[6]] form-control" id="inputClave" name="inputClave" placeholder="Clave de acceso">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <label for="inputClave" class="control-label">Confirmar contraseña:</label>
+                                <input type="password" class="validate[required, minSize[6]] form-control" id="inputClaveConf" name="inputClaveConf" placeholder="Confirmar clave de acceso">
+                                <span class="fa fa-check form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <div class="col-sm-6 text-left">
+                                <label class="control-label">Fecha de nacimiento:</label>
+                                <div class="input-group input-append date" id="datePicker">
+                                    <input type="text" class="form-control validate[required]" name="fechaNaci" id="fechaNaci" data-date-end-date="-18y">
+                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 text-left">
+                                <label class="control-label">Sexo:</label>
+                                <br>
+                                <input class="validate[required]" type="radio" name="sexo" id="sexo" value="F">   Mujer
+                                <input class="validate[required]" type="radio" name="sexo" id="sexo" value="M">   Hombre
+                            </div>
+                        </div>	
+                        <div class="form-group has-feedback">
+                            <div class="col-sm-12 text-center">
+                                Al hacer <b>clic</b> en <b>"Registrarse"</b>, aceptas las condiciones y confirmas que leiste los <a href="#" data-toggle="modal" data-target="#modalConvocatoria">términos y condiciones de uso</a>
+                            </div>                        
+                        </div>	
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-2 text-center">
+                                <button class="btn btn-success" style="background-color: rgb(18, 150, 173); color: #FFFFFF" type="submit"><i class="fa fa-fw fa-check"></i>Registrarse</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Formacion Academica -->
+<div class="modal fade bs-example-modal-lg" id="modalConvocatoria" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Términos y Condiciones</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                	<div class="col-md-10 col-md-offset-1">
+                		
+<p align="center"><b>Responsabilidad y Términos de uso</b></p>
+<br>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">En
+razón a la exigencia legal consagrada en el artículo 15 de la
+Constitución Política de Colombia y en la Ley 1266 de 2008, Ley
+1581 de 2012, Ley 80 de 1993 y demás normas que la modifiquen
+reglamenten o desarrollen, el Departamento Administrativo Nacional de
+Estadística , presenta los siguientes términos y condiciones
+del proceso y del uso de la información:</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><u><b>1.Definiciones previas</b></u></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">Esta
+página establece los "Términos y Condiciones de Uso" que
+regulan las políticas frente al tratamiento de la información que
+ingresen los aspirantes a iniciar el proceso de selección celebrar
+contrato de prestación de servicios con el Departamento
+Administrativo Nacional de Estadística.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">Por
+favor, lea esta página atentamente. Si no acepta estas Condiciones
+Generales, no utilice este Sitio Web. Al utilizar este Sitio, usted
+declara la aceptación de las Condiciones Generales del proceso de
+selección con miras a la celebración de contrato de prestación de
+servicios para desarrollar actividades dentro de los diferentes
+operativos mediante los cuales cumple con su
+objeto misional y legal. DANE - FONDANE puede revisar estos Términos
+y Condiciones de Uso en cualquier momento, actualizando esta página.
+Usted debería visitar esta página cada vez que acceda al Sitio para
+revisar los Términos y Condiciones de Uso, puesto que le vinculan.
+Entiéndase de la lectura el nombre
+. El presente aplicativo está
+conformado por el conjunto de candidatos que han inscrito su hoja de
+vida en el sistema. Los candidatos son las personas naturales que
+inscriben su currículo en el aplicativo, con el fin de postularse a
+la selección de contratistas que corresponden con su perfil
+ocupacional.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><u><b>2. Objeto</b></u></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">Establecer
+los principios y los mecanismos para el ingreso de datos en el
+aplicativo, las normas que rigen el proceso de selección y la forma
+de proteger los derechos de los ciudadanos cuya información reposa
+en el aplicativo  y fijar el procedimiento que se
+seguirá para el manejo de la información contenida en dicho banco
+de datos.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><u><b>3. Ámbito de aplicación</b></u></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">Estos
+términos de uso se aplicarán a las personas que tienen el acceso al
+aplicativo , ya sean funcionarios de la entidad,
+personal de entidades en acceso a sus fuentes de información y
+ciudadanos inscritos en el mismo.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><u><b>4. Ley aplicable y jurisdicción</b></u></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">El
+usuario no podrá manifestar ante el Departamento Administrativo
+Nacional de Estadística -  o ante una autoridad
+judicial o administrativa, la aplicación de condición, norma o
+convenio que no esté expresamente incorporado en las presentes
+condiciones de uso, salvo las excepciones constitucionales
+correspondientes. - Estas condiciones serán gobernadas por las leyes
+de la República de Colombia, en los aspectos que no estén
+expresamente regulados en ellas. - Si cualquier disposición de estas
+condiciones pierde validez o fuerza obligatoria, por cualquier razón,
+todas las demás disposiciones, conservan su fuerza obligatoria,
+carácter vinculante y generarán todos sus efectos. - Para cualquier
+efecto legal o judicial, el domicilio  de las presentes condiciones
+es la ciudad de Bogotá, República de Colombia, y cualquier
+controversia que surja de su interpretación o aplicación se
+someterá a los jueces de la República de Colombia.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><u><b>5. Principios que rigen los términos y condiciones de uso</b></u></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">En el
+desarrollo, interpretación y aplicación del presente documento, se
+tendrán en cuenta los siguientes principios: Calidad de los
+Registros o Datos. En virtud de este principio la información a que
+se refiere este documento y suministrada por los ciudadanos inscritos
+debe ser veraz, exacta, actualizada, comprobable y comprensible, de
+tal manera que refleje la situación real presente de los
+intervinientes en los procesos de selección, si esta información no
+cumple con alguna de las condiciones aquí descritas se aplicarán
+las sanciones que determine el reglamento de este aplicativo.
+Circulación restringida (limitación de su uso al objeto del DANE –
+FON). Al no estar expresamente autorizada la divulgación de la
+información, por parte del titular de los datos, es imposible el uso
+para otros fines diferentes al que motivó el suministro de los
+datos. Principio del Respeto de los Derechos Constitucionales. Las
+actividades de inscripción, recepción, almacenamiento,
+procesamiento y suministro de la información deben respetar las
+normas y principios constitucionales. Libertad. En virtud del cual
+los datos personales que no tienen naturaleza pública, a los que se
+refiere el presente documento sólo pueden ser registrados y
+divulgados con el consentimiento libre, previo y expreso del titular,
+en los términos previstos en el presente documento. Respeto al Buen
+Nombre. En desarrollo del cual corresponde tanto a las fuentes y
+usuarios como al , respetar el derecho al buen nombre
+de los titulares de la información. En tal sentido, la información
+que reporten, utilicen o administren deberá cumplir con las
+condiciones de calidad señaladas en el presente documento. .
+Garantía al Acceso de la Información. Según el cual se garantiza a
+los titulares de la información a que se refiere este documento, en
+todo tiempo, el conocimiento, actualización y rectificación de la
+información registrada en las bases de datos del 
+con las limitaciones propias de la dinámica del proceso de
+selección. Seguridad. En virtud del cual la información que reposa
+en las fuentes de información y en el aplicativo ,
+se manejará con las medidas técnicas necesarias para garantizar la
+seguridad de los registros, evitando su adulteración, pérdida,
+consulta o uso no autorizado. Gratuidad. En atención a este
+principio, los servicios prestados por el aplicativo corresponden a
+un servicio público, gratuito e indiscriminado, bajo lo cual se
+entiende que la inscripción, recepción, almacenamiento,
+procesamiento y uso de la información que reposa en el aplicativo no
+constituye ninguna clase de erogación económica a los usuarios que
+utilicen el sistema. 
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><u><b>6. Normas de uso general</b></u></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b>6.1Postulación.</b> La postulación de candidatos se realiza mediante el
+proceso de auto consulta, donde los candidatos evalúan desde su
+consulta personalizada las convocatorias que se ajustan a su
+formación académica y experiencia laboral.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b>6.2 Información incluida en el aplicativo por los usuarios en general.</b>
+Como usuario usted es responsable de la información suministrada en
+las bases de datos del aplicativo   y serán los usuarios
+los únicos responsables de la veracidad, actualización,
+consolidación, complementación y afirmaciones propias que reposan
+en la hoja de vida y por las consecuencias de incluir o colocar dicha
+información en el aplicativo.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b>6.3 Obligaciones de los usuarios en general.</b> Los usuarios están
+obligados a lo siguiente: (1) registrar información veraz, seria, y
+verificable de la exigida dentro del aplicativo, fuese personal, formación academica y
+laboral. (2) mantener actualizada la información,
+verificar la existencia real y actual de los documentos y demás
+requisitos afirmados en la información personal y empresarial de los
+usuarios so pena de inactivar la permanencia de la información
+contenida en el aplicativo y las consecuencias que se establecen en
+el reglamento expedido  parte del . (3) autorizar el acceso de
+los funcionarios del  para que conozca el contenido
+de las hojas de vida del aplicativo. Los usuarios no podrán: (i)
+incluir o colocar en aplicativo cualquier clase de información o
+herramientas que estén protegidos por las leyes sobre derechos de
+autor, a menos que sea el propietario de tales derechos o haya
+obtenido permiso del propietario de tales derechos para incluir tal
+material en el aplicativo, (ii) incluir o colocar en el aplicativo
+información confidencial que atente contra la reserva industrial o
+comercial a menos que sea el propietario de los mismos o haya
+obtenido autorización del propietario, (iii) incluir material
+obsceno, difamatorio, abusivo, amenazante u ofensivo que pudiese
+atentar contra los derechos de otro usuario o cualquier otra persona
+o entidad, (iv) incluir en el aplicativo imágenes o declaraciones
+pornográficas o que incluyan sexo explícito, (v) incluir o colocar
+en el aplicativo cualquier clase de información que pudiese
+considerarse publicidad o anuncios publicitarios o políticos,
+cadenas de cartas, virus, caballos de Troya, bombas de tiempo o
+cualquier programa de computador o herramienta con la intención de
+dañar, interferir, interceptar o apropiarse de cualquier sistema,
+datos o información.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b>6.4 Reglas de Seguridad del :</b> Se prohíbe a los usuarios
+violar o intentar violar la seguridad del aplicativo, incluyendo pero
+no limitándose a: (a) acceder a datos que no estén destinados a tal
+usuario o entrar en un servidor o cuenta cuyo acceso no está
+autorizado al usuario, (b) evaluar o probar la vulnerabilidad de un
+sistema o red, o violar las medidas de seguridad o identificación
+sin la adecuada autorización, (c) intentar impedir el servicio a
+cualquier usuario, anfitrión o red, incluyendo sin limitación,
+mediante el envío de virus al Sitio Web, o mediante saturación,
+envíos masivos ("flooding"), "spamming",
+bombardeo de correo o bloqueos del sistema ("crashing"),
+(d) enviar correos no pedidos, incluyendo promociones y/o publicidad
+de productos o servicios. (e) falsificar cualquier cabecera de
+paquete TCP/IP o cualquier parte de la información de la cabecera de
+cualquier correo electrónico o en mensajes de foros de debate. (f)
+Borrar, adulterar, filtrar, deshabilitar o revisar cualquier material
+e información anunciado por otra persona o entidad. En caso de que
+un usuario administrador o el mismo  - FON corrobore la
+existencia de información que presuntamente no cumpla estas
+obligaciones de los usuarios,  se reserva el derecho
+de investigar y determinar de buena fe y, a su exclusiva discreción,
+el derecho de retirar o solicitar que sean excluidas dichas
+comunicaciones, así como determinar las situaciones de suspensión o
+la deshabilitación definitiva del usuario infractor y siempre será
+obligación del  poner en conocimiento de las
+autoridades competentes judiciales y administrativas los hechos
+considerados como posibles faltas disciplinarias o punibles penales. 
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b> 6.5 El uso del Material.</b> La denominación "material y herramientas"
+comportan todos y cada uno de los contenidos de este aplicativo Web,
+tales como textos, gráficos, imágenes, logotipos, símbolos,
+informaciones e iconos de botón, software y cualquier otro material.
+Queda prohibida la utilización de las marcas y nombres públicos
+, con intento de defraudar, desinformar, confundir u
+obtener beneficios de la utilización de los mencionados nombres. La
+utilización del material y las marcas de manera fraudulenta o
+irregular podrá configurar faltas y delitos protegidos por la ley
+colombiana vigente. 
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b>6.6 Registro y Contraseña.</b> Los usuarios del aplicativo en general  son
+los responsables de mantener la confidencialidad y custodia de sus
+datos y de su contraseña. Serán así mismo, responsables de todos
+los usos de su registro. En caso de olvido, manipulación,
+inactivación o sospecha de fraude o utilización indebida los
+usuarios deberán notificar inmediatamente al 
+cualquier uso sin autorización de su registro o contraseña. 
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b>7 Responsabilidades y garantías del </b></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%">El
+aplicativo del  es exclusivamente un Servicio
+abierto, gratuito e indiscriminado que busca que los ciudadanos
+interesados en prestar sus servicios al  ingresen sus
+datos para participar en los diferentes procesos de selección, los
+cuales se rigen por la Ley 80 de 1993, Ley 1150 de 2007, Decreto 2474
+de 2008, Decreto 1510 de 2013 y demás normas que conforman el
+Estatuto General de la Contratación Pública, por lo cual al
+ingresar sus datos no se genera ningún tipo de obligación de
+vinculación por parte del  o expectativas de orden
+laboral. 
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><b>8. Causales de inactivación</b></p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><br>
+</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"><a name="_GoBack"></a>
+Cualquier clase de acceso, intervención o manejo considerado como
+fraudulento, dañino, malintencionado y malicioso, de los
+reglamentados anteriormente en las obligaciones de los usuarios,
+comprobado o sospechoso, será potestativo para que el  –
+FON de manera discrecional pueda suspender el acceso al
+aplicativo. La suspensión o inactivación del servicio al usuario
+será potestativo del  y se determinara teniendo en
+cuenta la gravedad de la situación, el compromiso del  –
+FON y las consecuencias a terceras personas por la acción, de
+igual forma, el  dará traslado a las autoridades
+competentes a fin de que apliquen las sanciones del caso si a esto
+hubiere lugar.</p>
+<p align="JUSTIFY" style="margin-bottom: 0in; line-height: 100%"> 
+</p>
+	</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+        </section>
+        <footer class="footer"   style="background-color: #3c73a7">
+            <div class="container">
+	<div class="row" style="text-align: center; color: #FFFFFF">
+		Cualquier inquietud comunicarla al +57 3202187321
+	</div>
+</div>        </footer>
+    
+</body></html>
